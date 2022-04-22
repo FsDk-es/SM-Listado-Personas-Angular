@@ -3,44 +3,56 @@
     <h3>{{ title }}</h3>
   </div>
   <hr />
-  <form class="form-row">
-    <div class="form-group" col-md-2>
-      <!--<label for="nombre" class=".sr-only">Nombre</label>-->
-      <input
-        type="text"
-        name="nombre"
-        id="nombre"
-        placeholder="Nombre"
-        class="form-control-sm"
-        [(ngModel)] = "nombreInput"
-      />
-    </div>
 
-    <div class="form-row" col-md-2>
-      <!--<label for="nombre" class=".sr-only">Nombre</label>-->
-      <input
-        type="text"
-        name="apellido"
-        id="apellido"
-        placeholder="Apellido"
-        class="form-control-sm"
-        [(ngModel)] = "apellidoInput"
-      />
-    </div><br/>
-    <div class="col">
-      <button type="submit" class="btn btn-primary" (click)="agregarPersona()">
-        Agregar</button>
-    </div>  
-  
-  </form>
-  <br/>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div *ngFor="let persona of personas; let i = index">
-        {{ i + 1 }}: {{ persona.nombre }} {{ persona.apellido }}
+  <div class="card text-white bg-primary mb-3" style="max-width: 18rem">
+    <div class="card-header">{{ title }} en  <img  id='angular' src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png"></div>
+    <div class="card-body">
+      <form class="form-inline">
+           <div class="form-group">
+             <!--<label for="nombre" class=".sr-only">Nombre</label>-->
+             <input
+               type="text"
+               name="nombre"
+               id="nombre"
+               placeholder="Nombre"
+               class="form-control-sm"
+               [(ngModel)]="nombreInput"
+             />
+           </div>
+           <div class="form-row">
+             <!--<label for="nombre" class=".sr-only">Nombre</label>-->
+             <input
+               type="text"
+               name="apellido"
+               id="apellido"
+               placeholder="Apellido"
+               class="form-control-sm"
+               [(ngModel)]="apellidoInput"
+             />
+           </div>
+           <br />
+           <div class="col">
+             <button
+             id="benviar"
+               type="submit"
+               class="btn btn-primary"
+               (click)="agregarPersona()"
+             >
+               + Agregar
+             </button>
+           </div>
+         </form>
+       </div>
+      <h5 class="card-title">{{ title }}</h5>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div *ngFor="let persona of personas; let i = index">
+              {{ i + 1 }}: {{ persona.nombre }} {{ persona.apellido }}
+            </div>
+          </div>
+        </div>
       </div>
+      <p id="autor"> Copyright: <a id="autorlink" href="http://eScripting.org"> {{ autor }}</a></p>
     </div>
   </div>
-</div>
