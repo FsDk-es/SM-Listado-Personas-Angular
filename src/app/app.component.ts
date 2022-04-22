@@ -12,4 +12,20 @@ export class AppComponent {
   nombreInput:string = '';
   apellidoInput:string = '';
 
+
+  agregarPersona(){
+   let persona1 = new Persona(this.nombreInput, this.apellidoInput);
+   if (persona1.nombre === '') {
+    return  alert('Este campo es obligatorio');
+   }
+   if (persona1.apellido === '') {
+    return  alert('Este campo es obligatorio');
+   }
+   else { 
+     
+     this.personas.push(persona1);
+   }
+
+  }    
 }
+

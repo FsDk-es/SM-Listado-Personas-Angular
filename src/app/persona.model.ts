@@ -12,8 +12,7 @@ constructor(nombre:string,apellido:string){
 
 /*==============Posibilidad 2====================*/
 constructor(public nombre:string,public apellido:string){
-
-
 }
+
 
 }

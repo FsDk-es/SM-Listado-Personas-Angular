@@ -16,9 +16,8 @@
       />
     </div>
 
-    <div class="form-group" col-md-2>
+    <div class="form-row" col-md-2>
       <!--<label for="nombre" class=".sr-only">Nombre</label>-->
-      <br/>
       <input
         type="text"
         name="apellido"
@@ -28,7 +27,10 @@
         [(ngModel)] = "apellidoInput"
       />
     </div><br/>
-    <button type="button" class="btn btn-primary">Button</button>    
+    <div class="col">
+      <button type="submit" class="btn btn-primary" (click)="agregarPersona()">
+        Agregar</button>
+    </div>  
   
   </form>
   <br/>
