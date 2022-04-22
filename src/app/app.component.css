@@ -1,0 +1,35 @@
+#apellido {
+    background: #e29f9f;
+    width: 8pc;
+    margin-left: 48%;
+}
+#nombre {
+    width: 42%;
+    background: #e29f9f;
+    position: absolute;
+}
+#benviar{
+    background-color: #1f381c;
+    margin-left: 181px;
+    margin-top: -267px;
+    width: 33%;
+    font-size: 12px;
+}
+.card-title {
+    margin-bottom: 0.5rem;
+    margin-top: -19%;
+    text-align: center;
+}
+#autor {
+    color: #ffffff;
+    font-size: 11px;
+    margin: 3px;
+    margin-left: 62%;
+}
+#angular {
+    width: 38%;
+}
+#autorlink{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
