@@ -44,15 +44,11 @@
          </form>
        </div>
       <h5 class="card-title">{{ title }}</h5>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div *ngFor="let persona of personas; let i = index">
-              {{ i + 1 }}: {{ persona.nombre }} {{ persona.apellido }}
-            </div>
-          </div>
-        </div>
-      </div>
-      <p id="autor"> Copyright: <a id="autorlink" href="http://eScripting.org"> {{ autor }}</a></p>
     </div>
   </div>
+  <app-persona
+    *ngFor="let personaElemento of personas; let i = index"
+    [persona] = "personaElemento"
+    [indice] = "i"
+    >
+    </app-persona>
