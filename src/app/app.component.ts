@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Persona } from './persona.model';
-
+import { Inject } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -22,10 +22,11 @@ export class AppComponent {
     return  alert('Este campo es obligatorio');
    }
    else { 
-     
+  
      this.personas.push(persona1);
    }
 
   }    
 }
+
 
